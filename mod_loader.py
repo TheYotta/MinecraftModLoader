@@ -16,7 +16,8 @@ while True:
         if mod not in dirs_cleared:
             current_mod = mod
 
-    wanted_mod = input(fg("yellow")+f"WANTED MOD (CURRENT - {current_mod} || OPTIONS - {dirs_cleared}):")
+    print_mods = mods.remove(current_mod)
+    wanted_mod = input(fg("yellow")+f"WANTED MOD (CURRENT - {current_mod} || OPTIONS - {mods}):")
 
     if wanted_mod in dirs_cleared:
         if current_mod != "":
